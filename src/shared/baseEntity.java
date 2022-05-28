@@ -1,14 +1,12 @@
-package entities;
+package shared;
 
-import shared.baseEntity;
+public class baseEntity {
+    protected int id;
+    protected String nome;
+    protected String dataNascimento;
+    protected String dataCadastro;
 
-public class Aluno extends baseEntity{
-
-	private String nomeMae;
-	private String nomePai;
-
-
-	public Integer getId() {
+    public Integer getId() {
 		return id;
 	}
 
@@ -24,21 +22,7 @@ public class Aluno extends baseEntity{
 		this.nome = nome;
 	}
 
-	public String getNomeMae() {
-		return nomeMae;
-	}
 
-	public void setNomeMae(String nomeMae) {
-		this.nomeMae = nomeMae;
-	}
-
-	public String getNomePai() {
-		return nomePai;
-	}
-
-	public void setNomePai(String nomePai) {
-		this.nomePai = nomePai;
-	}
 
 	public String getDataNascimento() {
 		return dataNascimento;
@@ -55,5 +39,5 @@ public class Aluno extends baseEntity{
 	public void setDataCadastro(String dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
-		
+    
 }
