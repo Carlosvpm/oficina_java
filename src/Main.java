@@ -17,7 +17,7 @@ public class Main {
 	private static AlunoService alunoService = new AlunoService();
 
 	public static void main(String[] args) throws SQLException {
-
+		
 		// flag que controla execucao do programa
 		boolean continuar = true;
 

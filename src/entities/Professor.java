@@ -7,7 +7,6 @@ import shared.baseEntity;
 public class Professor extends baseEntity {
 
     private String matricula;
-    private List<Turma> turmas;
 
     public String getMatricula() {
         return matricula;
