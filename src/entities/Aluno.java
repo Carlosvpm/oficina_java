@@ -6,15 +6,17 @@ public class Aluno extends baseEntity{
 
 	private String nomeMae;
 	private String nomePai;
+	private String idTurma;
 
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
+	
 
 	public String getNome() {
 		return nome;
@@ -55,5 +57,7 @@ public class Aluno extends baseEntity{
 	public void setDataCadastro(String dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
+	
+	
 		
 }

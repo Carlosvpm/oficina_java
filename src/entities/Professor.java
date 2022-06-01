@@ -1,12 +1,11 @@
 package entities;
 
-import java.util.List;
-
 import shared.baseEntity;
 
 public class Professor extends baseEntity {
 
     private String matricula;
+    private String especializacao;		
 
     public String getMatricula() {
         return matricula;
@@ -14,6 +13,14 @@ public class Professor extends baseEntity {
 
     public void setMatricula(String matricula) {
         this.matricula = matricula;
+    }
+    
+    public void setEspecializacao(String especializacao) {
+        this.especializacao = especializacao;
+    }
+    
+    public String getEspecializacao() {
+    	return this.especializacao;			
     }
 
     

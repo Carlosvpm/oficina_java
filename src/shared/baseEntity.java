@@ -1,16 +1,16 @@
 package shared;
 
 public class baseEntity {
-    protected int id;
+    protected String id;
     protected String nome;
     protected String dataNascimento;
     protected String dataCadastro;
 
-    public Integer getId() {
+    public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
