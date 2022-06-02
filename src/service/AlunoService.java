@@ -62,6 +62,11 @@ public class AlunoService {
 		List<Aluno> alunos = getAll();
 		imprimeAlunos(alunos);		
 	}
+	
+	public static void listarAlunos(int a) {
+		List<Aluno> alunos = getAll();
+		imprimeAlunos(alunos);		
+	}
 
 	
 

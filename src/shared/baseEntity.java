@@ -31,6 +31,10 @@ public class baseEntity {
 	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
+	private int data;
+	public void setDataNascimento(int dataNascimento) {
+		this.data= dataNascimento;
+	}
 
 	public String getDataCadastro() {
 		return this.dataCadastro;

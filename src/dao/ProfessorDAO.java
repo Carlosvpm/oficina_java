@@ -55,26 +55,27 @@ public class ProfessorDAO extends BaseDao {
 		}
 	}
 
-	public static List<Professor> excluirProfessor(String idProfessor) {
+	public static void excluirProfessor(String idProfessor) {
 		String sql = "DELETE FROM professor WHERE id = " + idProfessor;
 		try {
 			Statement stmt = connection.createStatement();
-			ResultSet rs = stmt.executeQuery(sql);
-			return recuperaProfessores(stmt, rs);
+			stmt.executeQuery(sql);
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
 	}
 
-	public static Professor atualizarProfessor(Professor professor) {
-		String sql = "UPDATE professor SET nome = " + professor.getNome() + ",dt_nasc = " + professor.getDataNascimento()
-				+ ",especializacao = " + professor.getEspecializacao() + ", matricula = " + professor.getMatricula() + " WHERE id = " + professor.getId();
-		try {
-			Statement stmt = connection.createStatement();
-			ResultSet rs = stmt.executeQuery(sql);
-			return recuperaProfessor(stmt, rs);
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
+	public static void atualizarProfessor(Professor professor) {
+		String sql = "UPDATE professor SET nome = ?, dt_cadastro = ?, dt_nasc = ?, matricula = ? WHERE id = ?";
+		try(PreparedStatement preparedStatement = con.prepareStatement(sql)){
+			preparedStatement.setString(1, professor.getNome());
+			preparedStatement.setString(2, professor.getDataCadastro());
+			preparedStatement.setString(3, professor.getDataNascimento());
+			preparedStatement.setString(4, professor.getMatricula());
+			preparedStatement.setString(5, professor.getId());
+			preparedStatement.execute();
+		}catch(SQLException e){
+			e.printStackTrace();
 		}
 	}
 
